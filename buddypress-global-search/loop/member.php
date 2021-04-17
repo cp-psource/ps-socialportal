@@ -1,0 +1,1 @@
+<?php cb_bp_get_item_entry_template( 'members/entry/member-entry' ); ?>

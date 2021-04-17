@@ -1,0 +1,14 @@
+.customize-control-cb-color .wp-color-result span {
+	background: #f7f7f7;
+}
+.customize-control-cb-color .wp-color-result span.color-alpha {
+	height:28px !important;
+}
+.customize-control-cb-color .cb-color-picker-alpha.wp-color-picker {
+    width: 96px !important;
+    line-height: 17px;
+}
+.customize-control-cb-color .wp-picker-clear {
+   /* margin-left: 2%;*/
+    min-height: 28px;
+}

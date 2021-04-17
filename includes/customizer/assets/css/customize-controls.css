@@ -1,0 +1,169 @@
+/* === Common === */
+.cb-clearfix:before,
+.cb-clearfix:after,
+.cb-control-clearfix:before,
+.cb-control-clearfix:after {
+    content: " ";
+    display: table;
+}
+.cb-clearfix:after,
+.cb-control-clearfix:after {
+    clear: both;
+}
+
+.customize-control-sub-title {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 2px;
+}
+
+.customize-control .cb-control-full-row {
+    margin-bottom: 5px;
+}
+.customize-control .cb-control-left {
+    width: 48%;
+    float: left;
+    margin-right: 2%;
+}
+
+.customize-control .cb-control-right {
+    width: 48%;
+    float: left;
+    margin-left: 2%;
+}
+
+.customize-control .cb-control-half {
+    float: left;
+    width: 48%;
+}
+
+.customize-control .cb-control-half:nth-child(even) {
+    margin-right: 2%;
+}
+
+.customize-control .cb-control-half:nth-child(odd) {
+    margin-left: 2%;
+}
+
+.customize-control .cb-control-half:nth-child(2n) {
+    clear: left;
+}
+
+/* == Color Palette == */
+.customize-control-cb-palette label,
+.customize-control-cb-preset label {
+    display: block;
+    padding: 0 10px 10px;
+}
+
+.customize-control-cb-palette label.selected,
+.customize-control-cb-preset label.selected {
+    padding-top: 5px;
+    background-color: #ddd;
+}
+
+.customize-control-cb-palette .palette-label,
+.customize-control-cb-preset .palette-label {
+    line-height: 28px;
+}
+
+.customize-control-cb-palette .palette-block,
+.customize-control-cb-preset .palette-block {
+    display: table;
+    width: 100%;
+    height: 45px;
+}
+
+.customize-control-cb-palette .palette-color,
+.customize-control-cb-preset .palette-color {
+    display: table-cell;
+    height: 100%;
+}
+
+/* === Radio Image Control === */
+
+.customize-control-cb-radio-image input[type="radio"] {
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    overflow: hidden;
+    position: absolute !important;
+    width: 1px;
+}
+
+.customize-control-cb-radio-image img {
+    box-sizing: border-box;
+    max-width: 100%;
+    height: auto;
+    padding: 1px;
+    border: 4px solid transparent;
+}
+
+.customize-control-cb-radio-image img:hover,
+.customize-control-cb-radio-image img:focus {
+    border-color: #ccc;
+}
+
+.customize-control-cb-radio-image input:checked + span + img {
+    border-color: #00a0d2;
+}
+
+/* == Info title == */
+.customize-control-cb-info-title {
+    margin-bottom: 0;
+}
+
+.customize-control-cb-info-title h4 {
+    margin-bottom: 0;
+    background: #fff;
+    padding: 5px 5px 5px 10px;
+}
+
+/* == Typography == */
+.customize-control-cb-spacing .wrapper .control > div .inner .selectize-control.single {
+    width: 50%;
+}
+.customize-control-cb-spacing .wrapper .control > div .inner .selectize-control.single > .selectize-input {
+    height: 36px;
+}
+/* == Responsive devices == */
+.customize-control .devices-wrapper{
+    clear:both;
+    text-align: right;
+}
+.customize-control .devices button {
+    cursor: pointer;
+    background: 0 0;
+    border: none;
+    height: 45px;
+    padding: 0 3px;
+    margin: 0 0 0 -4px;
+    box-shadow: none;
+    border-top: 1px solid transparent;
+    border-bottom: 4px solid transparent;
+    transition: .15s color ease-in-out,.15s background-color ease-in-out,.15s border-color ease-in-out;
+}
+.customize-control .devices button:before {
+    display: inline-block;
+    -webkit-font-smoothing: antialiased;
+    font: normal 20px/30px dashicons;
+    vertical-align: top;
+    margin: 3px 0;
+    padding: 4px 8px;
+    color: #656a6f;
+}
+.customize-control .devices .preview-desktop:before {
+    content: "\f472";
+}
+.customize-control .devices .preview-tablet:before {
+    content: "\f471";
+}
+.customize-control .devices .preview-mobile:before {
+    content: "\f470";
+}
+.customize-control .devices button.active {
+    border-bottom-color: #191e23;
+}
+
+.customize-control-checkbox label {
+    font-weight: bold;
+}

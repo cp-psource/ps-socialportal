@@ -1,0 +1,202 @@
+/* General Customizer style tweaks */
+.customize-control-title {
+    margin-top: 5px;
+}
+
+span.description {
+    margin-bottom: 10px;
+    font-style: normal;
+}
+
+#customize-controls .description {
+    color: #999;
+}
+
+/* Misc control styles */
+/* == info title == */
+.cb-control-cb-info-title {
+    color: #222;
+    font-size: 16px;
+    font-weight: normal;
+    margin: 14px 0 6px;
+    line-height: 28px;
+}
+
+/* Radio control styles */
+.customize-control-radio-buttonset,
+.customize-control-cb-radio-image{
+    padding: 0;
+}
+
+.customize-control-radio-buttonset .customize-control-title,
+.customize-control-cb-radio-image .customize-control-title {
+    line-height: 24px;
+    margin-bottom: 5px;
+}
+
+.cb-control-buttonset label {
+    line-height: 28px;
+    padding: 5px 10px;
+}
+
+.image.ui-buttonset label.ui-button {
+    padding: 2px;
+    line-height: 0;
+    border-radius: 0;
+    margin-right: 0;
+    background: #999;
+    border: 0;
+}
+
+li .image.ui-buttonset label.ui-button {
+    margin-bottom: 10px;
+    margin-right: 15px;
+}
+
+.cb-control-buttonset label {
+    border-color: #fff;
+}
+
+.cb-control-buttonset label.ui-state-default {
+    background: #eee;
+}
+
+.cb-control-buttonset label.ui-button {
+    display: inline-block;
+}
+
+.cb-control-buttonset label.ui-state-hover {
+    color: #0074a2;
+    background-color: #fff;
+    background-color: rgba(255, 255, 255, .25);
+}
+
+.cb-control-buttonset label.ui-state-active {
+    color: #212121;
+    background: #fff;
+}
+
+/* Range control styles */
+li.customize-control .cb-control-range {
+    float: left;
+    width: 25%;
+}
+
+
+li.customize-control .cb-range-slider {
+    float: right;
+    width: 70%;
+    margin-top: 8px;
+}
+
+
+li.customize-control .cb-range-slider .ui-slider-handle {
+    top: -.4em;
+    border-color: #777;
+    background: #777;
+}
+
+li.customize-control .ui-slider-horizontal {
+    height: .6em;
+    border-color: #fff;
+    background: #fff;
+}
+
+li.customize-control .cb-range-slider .ui-slider-handle {
+    border-radius: 100%;
+}
+
+
+li.customize-control .cb-range-slider .ui-slider-handle:hover {
+    cursor: pointer;
+}
+
+/* jQuery UI theme tweaks */
+.ui-widget {
+    font-family: inherit;
+    font-size: 0.85em;
+}
+
+.ui-button-text-only .ui-button-text {
+    padding: 0;
+}
+
+/* Chosen tweaks */
+.chosen-container .chosen-drop {
+    box-shadow: none;
+}
+
+.chosen-container-active .chosen-choices,
+.chosen-container-active .chosen-single {
+    border: 1px solid #aaaaaa;
+    box-shadow: none;
+}
+
+/* === Palette Control === */
+
+.customize-control-cb-palette label {
+    display: block;
+    padding: 0 10px 10px;
+}
+
+.customize-control-cb-palette label.selected {
+    padding-top: 5px;
+    background-color: #ddd;
+}
+
+.customize-control-cb-palette .palette-label {
+    line-height: 28px;
+}
+
+.customize-control-cb-palette .palette-block {
+    display: table;
+    width: 100%;
+    height: 45px;
+}
+
+.customize-control-cb-palette .palette-color {
+    display: table-cell;
+    height: 100%;
+}
+
+/* === Radio Image Control === */
+
+.customize-control-cb-radio-image input[type="radio"] {
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    overflow: hidden;
+    position: absolute !important;
+    width: 1px;
+}
+
+.customize-control-cb-radio-image img {
+    box-sizing: border-box;
+    max-width: 100%;
+    height: auto;
+    padding: 1px;
+    border: 4px solid transparent;
+}
+
+.customize-control-cb-radio-image img:hover,
+.customize-control-cb-radio-image img:focus {
+    border-color: #ccc;
+}
+
+.customize-control-cb-radio-image input:checked + span + img {
+    border-color: #00a0d2;
+}
+
+.customize-control-typography {
+    padding: 0 5px 5px;
+    background: #f7f7f7;
+}
+
+
+.customize-control h4.cb-control-cb-info-title {
+    font-size: 18px;
+    border: 1px solid #ddd;
+    border-left: 4px solid #00a0d2;
+    color: #888;
+    margin-top: 20px;
+    font-weight: normal;
+}

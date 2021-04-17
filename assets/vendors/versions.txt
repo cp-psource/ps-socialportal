@@ -1,0 +1,2 @@
+1. WebUI Popover: https://github.com/q2apro/webui-popover
+    Commit #357683d0564d5ce12f29b32058b6ac05b31ade15
