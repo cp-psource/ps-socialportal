@@ -4,7 +4,7 @@
  *
  * @package    PS_SocialPortal
  * @subpackage Customizer
- * @copyright  Copyright (c) 2018, DerN3rd
+ * @copyright  Copyright (c) 2018-2021, DerN3rd
  * @license    https://www.gnu.org/licenses/gpl.html GNU Public License
  * @author     DerN3rd
  */
@@ -129,7 +129,7 @@ class CB_Customizer_Loader {
 
 		// Add localization strings.
 		$localize = array(
-			'docURL'       => 'https://n3rds.work/docs/social-portal-tutorials-erste-schritte/',
+			'docURL'       => 'https://n3rds.work/docs/social-portal-dokumentation/',
 			'docLabel'     => esc_html__( 'Theme Dokumentation ', 'social-portal' ),
 			'reset'        => __( 'RESET', 'social-portal' ),
 			'confirm'      => __( 'Achtung! Dadurch werden alle Anpassungen entfernt, die jemals über den Customizer an diesem Theme vorgenommen wurden! Diese Aktion ist irreversibel!', 'social-portal' ),
@@ -205,7 +205,7 @@ class CB_Customizer_Loader {
 		}
 
 		if ( ! current_user_can( 'edit_themes' ) ) {
-			wp_send_json_error( __( 'Insufficient capability.', 'social-portal' ) );
+			wp_send_json_error( __( 'Unzureichende Fähigkeit.', 'social-portal' ) );
 		}
 		// reset.
 		remove_theme_mods();

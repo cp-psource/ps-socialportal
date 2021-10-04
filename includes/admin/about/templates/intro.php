@@ -4,7 +4,7 @@
  *
  * @package    PS_SocialPortal
  * @subpackage Admin
- * @copyright  Copyright (c) 2019, DerN3rd
+ * @copyright  Copyright (c) 2019-2021, DerN3rd
  * @license    https://www.gnu.org/licenses/gpl.html GNU Public License
  * @author     DerN3rd
  */
@@ -59,10 +59,10 @@ $theme_data	= wp_get_theme();
 		<h3><?php esc_html_e( 'Plugin-Bundle', 'social-portal' ); ?></h3>
 		<p>
 			<?php /* translators: %s Theme Pluginbundle */
-			printf( esc_html__( '%s unterstützt den Theme Customizer für alle Theme-Einstellungen. Klicke auf "Anpassen", um Deine Webseite zu personalisieren.', 'social-portal' ), esc_html( $theme_data->Name ) );
+			printf( esc_html__( '%s bringt einige Plugins mit, welche Die Funktionen des Themes erweitern, bringe Emojis zu den Aktivitäten und mehr...', 'social-portal' ), esc_html( $theme_data->Name ) );
 			?>
 		</p>
-		<a target="_blank" href="https://n3rds.work/docs/social-portal-plugin-bundle/" class="button button-primary button-plugin-doc"><?php esc_html_e( 'Plugin-Bundle Doc', 'social-portal' ); ?></a>
+		<a target="_blank" href="https://n3rds.work/docs/ps-social-portal-theme-plugins/" class="button button-primary button-plugin-doc"><?php esc_html_e( 'Plugin-Bundle Doc', 'social-portal' ); ?></a>
 	</div>
 
 </div> <!-- end of intro sections -->

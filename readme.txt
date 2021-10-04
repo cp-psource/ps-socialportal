@@ -7,7 +7,7 @@ Stable tag: 2.1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-PS SocialPortal is a fast, optimized and beautifully coded theme for creating BuddyPress communities and WordPress, bbPress, WooCommerce Webseiten.
+PS SocialPortal ist ein schnelles, optimiertes und schön codiertes Theme zum Erstellen von BuddyPress-Communitys und WordPress, bbPress, WooCommerce Webseiten.
 
 == Description ==
 Mit PS SocialPortal kannst Du mit WordPress, BuddyPress, bbPress und WooCommerce großartige Communitys erstellen.
@@ -23,11 +23,34 @@ Du kannst PS SocialPortal verwenden, um
 Es ist ein vielseitiges WordPress-Theme, mit dem Blogs, Unternehmensseiten, soziale Communities (mit BuddyPress) erstellt werden können
 und mit wenig Anpassung kann es an eine breite Palette von Anwendungsfällen angepasst werden.
 
-== Frequently Asked Questions ==
+[POWERED BY PSOURCE](https://n3rds.work/psource_kategorien/psource-plugins/)
+Online Geld verdienen macht dieses mächtige Leichtgewicht von eCommerce Plugin im Nu Kinderleicht.
 
-= Wo bekomme ich Unterstützung für dieses Theme? =
+[Projektseite](https://n3rds.work/piestingtal_source/ps-socialportal-theme/)
+[Handbuch](https://n3rds.work/docs/social-portal-dokumentation/)
+[Supportforum](https://n3rds.work/forums/forum/psource-support-foren/ps-social-portal-theme-supportforum/)
+[GitHub](https://github.com/piestingtal-source/ps-socialportal)
 
-Wir bieten Unterstützung über [N3rds@Work Forum](https://n3rds.work/forums/)
+== Mehr PSOURCE ==
+
+= Finde mehr Piestingtal.Source =
+
+Mit unserem [A/B Test Plugin](https://n3rds.work/piestingtal_source/a-b-test-plugin/) holst Du mehr aus Deinem SEO.
+
+Wirf einen Blick in unser [PSOURCE Sortiment](https://n3rds.work/psource_kategorien/psource-plugins/) und hole noch mehr aus Deinem WordPress/ClassicPress!
+
+Halte Dich mit unserem [Newsletter](https://n3rds.work/webmasterservice-n3rdswork-digalize-das-piestingtal/newsletter-management/) über unsere Piestingtal.Source informiert!
+
+== Hilf uns ==
+
+Viele, viele Kaffees konsumieren wir während wir an unseren Plugins und Themes arbeiten.
+Wie wärs? Möchtest Du uns mit einer Kaffee-Spende bei der Arbeit an unseren Plugins unterstützen?
+
+= Unterstütze uns =
+
+Mach eine [Spende per Überweisung oder PayPal](https://n3rds.work/spendenaktionen/unterstuetze-unsere-psource-free-werke/) wir Danken Dir!
+
+Halte Dich mit unserem [Newsletter](https://n3rds.work/webmasterservice-n3rdswork-digalize-das-piestingtal/newsletter-management/) über unsere Piestingtal.Source informiert!
 
 
 == Changelog ==
@@ -79,7 +102,7 @@ Wir bieten Unterstützung über [N3rds@Work Forum](https://n3rds.work/forums/)
 = 1.0.0 =
 * Initial public release as free theme.
 
-== Upgrade Notice ==
+== Entwickler ==
 
 = 2.0.0 =
  PS SocialPortal 2.0 is not compatible with 1.x.
