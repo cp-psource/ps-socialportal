@@ -55,9 +55,10 @@ Halte Dich mit unserem [Newsletter](https://n3rds.work/webmasterservice-n3rdswor
 
 == Changelog ==
 
-= 1.5.2 =
+= 1.5.4 =
 
-* Support für PSOURCE Mediathek (Comming Soon) integriert, ersetzt damit auch MediaPress.
+* Support für PSOURCE Mediathek (Comming Soon) integriert.
+* PS Forum Integration inkl. passenden Design
 
 = 1.5.1 = 
 
