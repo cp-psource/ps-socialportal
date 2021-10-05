@@ -44,7 +44,7 @@
 	<div class="main-column">
 
 		<div id="message" class="info">
-			<p><?php _e( 'Wähle Personen aus Ihrer Freundesliste aus, die Du einladen möchtest.', 'social-portal' ); ?></p>
+			<p><?php _e( 'Wähle Personen aus Deiner Freundesliste aus, die Du einladen möchtest.', 'social-portal' ); ?></p>
 		</div>
 
 		<?php do_action( 'bp_before_group_send_invites_list' ) ?>

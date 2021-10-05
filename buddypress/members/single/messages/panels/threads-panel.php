@@ -2,7 +2,7 @@
 <div class="bp-threads-panel scrollable" id="bp-threads-panel" data-nonce="<?php echo wp_create_nonce( 'messages_get_thread' ); ?>">
 	<div class="bp-threads-search">
 		<div class="bp-threads-toolbar">
-			<a href="#" data-balloon-pos="right" aria-label="<?php _e('Compose', 'social-portal' );?>" class="message-compose"><i class="fa fa-plus-circle"></i> </a>
+			<a href="#" data-balloon-pos="right" aria-label="<?php _e('Verfassen', 'social-portal' );?>" class="message-compose"><i class="fa fa-plus-circle"></i> </a>
 		</div>
 
 		<?php bp_message_search_form(); ?>
