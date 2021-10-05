@@ -1,11 +1,11 @@
 <?php
 
 /**
- * Functions of bbPress's Default theme
+ * Functions of PSForum's Default theme
  *
- * @package bbPress
- * @subpackage BBP_Theme_Compat
- * @since bbPress (r3732)
+ * @package PSForum
+ * @subpackage PSF_Theme_Compat
+ * @since PSForum (r3732)
  */
 
 // Exit if accessed directly
@@ -15,45 +15,45 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /** Theme Setup ***************************************************************/
 
-if ( ! class_exists( 'BBP_Default' ) ) :
+if ( ! class_exists( 'PSF_Default' ) ) :
 
 	/**
-	 * Loads bbPress Default Theme functionality
+	 * Loads PSForum Default Theme functionality
 	 *
 	 * This is not a real theme by WordPress standards, and is instead used as the
-	 * fallback for any WordPress theme that does not have bbPress templates in it.
+	 * fallback for any WordPress theme that does not have PSForum templates in it.
 	 *
-	 * To make your custom theme bbPress compatible and customize the templates, you
+	 * To make your custom theme PSForum compatible and customize the templates, you
 	 * can copy these files into your theme without needing to merge anything
-	 * together; bbPress should safely handle the rest.
+	 * together; PSForum should safely handle the rest.
 	 *
-	 * See @link BBP_Theme_Compat() for more.
+	 * See @link PSF_Theme_Compat() for more.
 	 *
-	 * @since bbPress (r3732)
+	 * @since PSForum (r3732)
 	 *
-	 * @package bbPress
-	 * @subpackage BBP_Theme_Compat
+	 * @package PSForum
+	 * @subpackage PSF_Theme_Compat
 	 */
-	class BBP_Default extends BBP_Theme_Compat {
+	class PSF_Default extends PSF_Theme_Compat {
 
 		/** Functions *************************************************************/
 
 		/**
-		 * The main bbPress (Default) Loader
+		 * The main PSForum (Default) Loader
 		 *
-		 * @since bbPress (r3732)
+		 * @since PSForum (r3732)
 		 *
-		 * @uses BBP_Default::setup_globals()
-		 * @uses BBP_Default::setup_actions()
+		 * @uses PSF_Default::setup_globals()
+		 * @uses PSF_Default::setup_actions()
 		 */
 		public function __construct( $properties = array() ) {
 
-			parent::__construct( bbp_parse_args( $properties, array(
+			parent::__construct( psf_parse_args( $properties, array(
 				'id'      => 'default',
-				'name'    => __( 'bbPress Standard', 'social-portal' ),
-				'version' => bbp_get_version(),
-				'dir'     => trailingslashit( bbpress()->themes_dir . 'default' ),
-				'url'     => trailingslashit( bbpress()->themes_url . 'default' ),
+				'name'    => __( 'PSForum Standard', 'social-portal' ),
+				'version' => psf_get_version(),
+				'dir'     => trailingslashit( psforum()->themes_dir . 'default' ),
+				'url'     => trailingslashit( psforum()->themes_url . 'default' ),
 			), 'default_theme' ) );
 
 			$this->setup_actions();
@@ -62,7 +62,7 @@ if ( ! class_exists( 'BBP_Default' ) ) :
 		/**
 		 * Setup the theme hooks
 		 *
-		 * @since bbPress (r3732)
+		 * @since PSForum (r3732)
 		 * @access private
 		 *
 		 * @uses add_filter() To add various filters
@@ -72,22 +72,22 @@ if ( ! class_exists( 'BBP_Default' ) ) :
 
 			/** Scripts ***********************************************************/
 
-			add_filter( 'bbp_no_breadcrumb', array( $this, 'filter_breadcrumb' ) );
-			add_action( 'bbp_enqueue_scripts', array( $this, 'enqueue_styles' ) ); // Enqueue theme CSS
-			add_action( 'bbp_enqueue_scripts', array( $this, 'enqueue_scripts' ) ); // Enqueue theme JS
-			add_filter( 'bbp_enqueue_scripts', array(
+			add_filter( 'psf_no_breadcrumb', array( $this, 'filter_breadcrumb' ) );
+			add_action( 'psf_enqueue_scripts', array( $this, 'enqueue_styles' ) ); // Enqueue theme CSS
+			add_action( 'psf_enqueue_scripts', array( $this, 'enqueue_scripts' ) ); // Enqueue theme JS
+			add_filter( 'psf_enqueue_scripts', array(
 				$this,
 				'localize_topic_script'
 			) ); // Enqueue theme script localization
-			add_action( 'bbp_ajax_favorite', array(
+			add_action( 'psf_ajax_favorite', array(
 				$this,
 				'ajax_favorite'
 			) ); // Handles the topic ajax favorite/unfavorite
-			add_action( 'bbp_ajax_subscription', array(
+			add_action( 'psf_ajax_subscription', array(
 				$this,
 				'ajax_subscription'
 			) ); // Handles the topic ajax subscribe/unsubscribe
-			add_action( 'bbp_ajax_forum_subscription', array(
+			add_action( 'psf_ajax_forum_subscription', array(
 				$this,
 				'ajax_forum_subscription'
 			) ); // Handles the forum ajax subscribe/unsubscribe
@@ -97,7 +97,7 @@ if ( ! class_exists( 'BBP_Default' ) ) :
 
 			/** Override **********************************************************/
 
-			do_action_ref_array( 'bbp_theme_compat_actions', array( &$this ) );
+			do_action_ref_array( 'psf_theme_compat_actions', array( &$this ) );
 		}
 
 		public function filter_breadcrumb( $hide ) {
@@ -109,7 +109,7 @@ if ( ! class_exists( 'BBP_Default' ) ) :
 		/**
 		 * Load the theme CSS
 		 *
-		 * @since bbPress (r3732)
+		 * @since PSForum (r3732)
 		 *
 		 * @uses wp_enqueue_style() To enqueue the styles
 		 */
@@ -119,21 +119,21 @@ if ( ! class_exists( 'BBP_Default' ) ) :
 			$styles = array();
 
 			// LTR
-			$styles['bbp-default'] = array(
-				'file'         => 'bbpress.css',
+			$styles['psf-default'] = array(
+				'file'         => 'psforum.css',
 				'dependencies' => array()
 			);
 
 			// RTL helpers
 			/*if ( is_rtl() ) {
-				$styles['bbp-default-rtl'] = array(
-					'file'         => 'bbpress-rtl.css',
-					'dependencies' => array( 'bbp-default' )
+				$styles['psf-default-rtl'] = array(
+					'file'         => 'psforum-rtl.css',
+					'dependencies' => array( 'psf-default' )
 				);
 			}*/
 
 			// Filter the scripts
-			$styles = apply_filters( 'bbp_default_styles', $styles );
+			$styles = apply_filters( 'psf_default_styles', $styles );
 
 			// Enqueue the styles
 			foreach ( $styles as $style_id => $attributes ) {
@@ -143,19 +143,19 @@ if ( ! class_exists( 'BBP_Default' ) ) :
 					wp_enqueue_style( $handle['handle'], $handle['location'], false, CB_THEME_VERSION );
 				}
 
-				// bbp_enqueue_style( $handle, $attributes['file'], $attributes['dependencies'], $this->version, 'screen' );
+				// psf_enqueue_style( $handle, $attributes['file'], $attributes['dependencies'], $this->version, 'screen' );
 			}
 		}
 
 		/**
 		 * Enqueue the required Javascript files
 		 *
-		 * @since bbPress (r3732)
+		 * @since PSForum (r3732)
 		 *
-		 * @uses bbp_is_single_forum() To check if it's the forum page
-		 * @uses bbp_is_single_topic() To check if it's the topic page
-		 * @uses bbp_thread_replies() To check if threaded replies are enabled
-		 * @uses bbp_is_single_user_edit() To check if it's the profile edit page
+		 * @uses psf_is_single_forum() To check if it's the forum page
+		 * @uses psf_is_single_topic() To check if it's the topic page
+		 * @uses psf_thread_replies() To check if threaded replies are enabled
+		 * @uses psf_is_single_user_edit() To check if it's the profile edit page
 		 * @uses wp_enqueue_script() To enqueue the scripts
 		 */
 		public function enqueue_scripts() {
@@ -164,33 +164,33 @@ if ( ! class_exists( 'BBP_Default' ) ) :
 			$scripts = array();
 
 			// Always pull in jQuery for TinyMCE shortcode usage
-			if ( bbp_use_wp_editor() ) {
-				$scripts['bbpress-editor'] = array(
+			if ( psf_use_wp_editor() ) {
+				$scripts['psforum-editor'] = array(
 					'file'         => 'editor.js',
 					'dependencies' => array( 'jquery' )
 				);
 			}
 
 			// Forum-specific scripts
-			if ( bbp_is_single_forum() ) {
-				$scripts['bbpress-forum'] = array(
+			if ( psf_is_single_forum() ) {
+				$scripts['psforum-forum'] = array(
 					'file'         => 'forum.js',
 					'dependencies' => array( 'jquery' )
 				);
 			}
 
 			// Topic-specific scripts
-			if ( bbp_is_single_topic() ) {
+			if ( psf_is_single_topic() ) {
 
 				// Topic favorite/unsubscribe
-				$scripts['bbpress-topic'] = array(
+				$scripts['psforum-topic'] = array(
 					'file'         => 'topic.js',
 					'dependencies' => array( 'jquery' )
 				);
 
 				// Hierarchical replies
-				if ( bbp_thread_replies() ) {
-					$scripts['bbpress-reply'] = array(
+				if ( psf_thread_replies() ) {
+					$scripts['psforum-reply'] = array(
 						'file'         => 'reply.js',
 						'dependencies' => array( 'jquery' )
 					);
@@ -198,15 +198,15 @@ if ( ! class_exists( 'BBP_Default' ) ) :
 			}
 
 			// User Profile edit
-			if ( bbp_is_single_user_edit() ) {
-				$scripts['bbpress-user'] = array(
+			if ( psf_is_single_user_edit() ) {
+				$scripts['psforum-user'] = array(
 					'file'         => 'user.js',
 					'dependencies' => array( 'user-query' )
 				);
 			}
 
 			// Filter the scripts
-			$scripts = apply_filters( 'bbp_default_scripts', $scripts );
+			$scripts = apply_filters( 'psf_default_scripts', $scripts );
 
 			// Enqueue the scripts
 			foreach ( $scripts as $script_id => $attributes ) {
@@ -214,7 +214,7 @@ if ( ! class_exists( 'BBP_Default' ) ) :
 				if ( $handle && ! empty( $handle['handle'] ) ) {
 					wp_enqueue_script( $handle['handle'], $handle['location'], $attributes['dependencies'], CB_THEME_VERSION );
 				}
-				//	bbp_enqueue_script( $handle, $attributes['file'], $attributes['dependencies'], $this->version, 'screen' );
+				//	psf_enqueue_script( $handle, $attributes['file'], $attributes['dependencies'], $this->version, 'screen' );
 			}
 		}
 
@@ -267,14 +267,14 @@ if ( ! class_exists( 'BBP_Default' ) ) :
 			);
 
 			$locations['bb-default'] = array(
-				'dir'  => bbpress()->themes_dir . 'default',
-				'uri'  => bbpress()->themes_url . 'default',
+				'dir'  => psforum()->themes_dir . 'default',
+				'uri'  => psforum()->themes_url . 'default',
 				'file' => $file,
 			);
 			// Subdirectories within the top-level $locations directories.
 			$subdirs = array(
-				'assets/' . $type . '/bbpress/', // will look into theme/assets/css/buddypress or theme/assets/js.
-				'bbpress/' . $type,
+				'assets/' . $type . '/psforum/', // will look into theme/assets/css/buddypress or theme/assets/js.
+				'psforum/' . $type,
 				$type,
 			);
 
@@ -300,36 +300,36 @@ if ( ! class_exists( 'BBP_Default' ) ) :
 		 *
 		 * These localizations require information that may not be loaded even by init.
 		 *
-		 * @since bbPress (r3732)
+		 * @since PSForum (r3732)
 		 *
-		 * @uses bbp_is_single_forum() To check if it's the forum page
-		 * @uses bbp_is_single_topic() To check if it's the topic page
+		 * @uses psf_is_single_forum() To check if it's the forum page
+		 * @uses psf_is_single_topic() To check if it's the topic page
 		 * @uses is_user_logged_in() To check if user is logged in
-		 * @uses bbp_get_current_user_id() To get the current user id
-		 * @uses bbp_get_forum_id() To get the forum id
-		 * @uses bbp_get_topic_id() To get the topic id
-		 * @uses bbp_get_favorites_permalink() To get the favorites permalink
-		 * @uses bbp_is_user_favorite() To check if the topic is in user's favorites
-		 * @uses bbp_is_subscriptions_active() To check if the subscriptions are active
-		 * @uses bbp_is_user_subscribed() To check if the user is subscribed to topic
-		 * @uses bbp_get_topic_permalink() To get the topic permalink
+		 * @uses psf_get_current_user_id() To get the current user id
+		 * @uses psf_get_forum_id() To get the forum id
+		 * @uses psf_get_topic_id() To get the topic id
+		 * @uses psf_get_favorites_permalink() To get the favorites permalink
+		 * @uses psf_is_user_favorite() To check if the topic is in user's favorites
+		 * @uses psf_is_subscriptions_active() To check if the subscriptions are active
+		 * @uses psf_is_user_subscribed() To check if the user is subscribed to topic
+		 * @uses psf_get_topic_permalink() To get the topic permalink
 		 * @uses wp_localize_script() To localize the script
 		 */
 		public function localize_topic_script() {
 
 			// Single forum
-			if ( bbp_is_single_forum() ) {
-				wp_localize_script( 'bbpress-forum', 'bbpForumJS', array(
-					'bbp_ajaxurl'        => bbp_get_ajax_url(),
+			if ( psf_is_single_forum() ) {
+				wp_localize_script( 'psforum-forum', 'psfForumJS', array(
+					'psf_ajaxurl'        => psf_get_ajax_url(),
 					'generic_ajax_error' => __( 'Etwas ist schief gelaufen. Aktualisiere Deinen Browser und versuche es erneut.', 'social-portal' ),
 					'is_user_logged_in'  => is_user_logged_in(),
 					'subs_nonce'         => wp_create_nonce( 'toggle-subscription_' . get_the_ID() )
 				) );
 
 				// Single topic
-			} elseif ( bbp_is_single_topic() ) {
-				wp_localize_script( 'bbpress-topic', 'bbpTopicJS', array(
-					'bbp_ajaxurl'        => bbp_get_ajax_url(),
+			} elseif ( psf_is_single_topic() ) {
+				wp_localize_script( 'psforum-topic', 'psfTopicJS', array(
+					'psf_ajaxurl'        => psf_get_ajax_url(),
 					'generic_ajax_error' => __( 'Etwas ist schief gelaufen. Aktualisiere Deinen Browser und versuche es erneut.', 'social-portal' ),
 					'is_user_logged_in'  => is_user_logged_in(),
 					'fav_nonce'          => wp_create_nonce( 'toggle-favorite_' . get_the_ID() ),
@@ -341,59 +341,59 @@ if ( ! class_exists( 'BBP_Default' ) ) :
 		/**
 		 * AJAX handler to Subscribe/Unsubscribe a user from a forum
 		 *
-		 * @since bbPress (r5155)
+		 * @since PSForum (r5155)
 		 *
-		 * @uses bbp_is_subscriptions_active() To check if the subscriptions are active
-		 * @uses bbp_is_user_logged_in() To check if user is logged in
-		 * @uses bbp_get_current_user_id() To get the current user id
+		 * @uses psf_is_subscriptions_active() To check if the subscriptions are active
+		 * @uses psf_is_user_logged_in() To check if user is logged in
+		 * @uses psf_get_current_user_id() To get the current user id
 		 * @uses current_user_can() To check if the current user can edit the user
-		 * @uses bbp_get_forum() To get the forum
+		 * @uses psf_get_forum() To get the forum
 		 * @uses wp_verify_nonce() To verify the nonce
-		 * @uses bbp_is_user_subscribed() To check if the forum is in user's subscriptions
-		 * @uses bbp_remove_user_subscriptions() To remove the forum from user's subscriptions
-		 * @uses bbp_add_user_subscriptions() To add the forum from user's subscriptions
-		 * @uses bbp_ajax_response() To return JSON
+		 * @uses psf_is_user_subscribed() To check if the forum is in user's subscriptions
+		 * @uses psf_remove_user_subscriptions() To remove the forum from user's subscriptions
+		 * @uses psf_add_user_subscriptions() To add the forum from user's subscriptions
+		 * @uses psf_ajax_response() To return JSON
 		 */
 		public function ajax_forum_subscription() {
 
 			// Bail if subscriptions are not active
-			if ( ! bbp_is_subscriptions_active() ) {
-				bbp_ajax_response( false, __( 'Abonnements sind nicht mehr aktiv.', 'social-portal' ), 300 );
+			if ( ! psf_is_subscriptions_active() ) {
+				psf_ajax_response( false, __( 'Abonnements sind nicht mehr aktiv.', 'social-portal' ), 300 );
 			}
 
 			// Bail if user is not logged in
 			if ( ! is_user_logged_in() ) {
-				bbp_ajax_response( false, __( 'Bitte melde Dich an, um dieses Forum zu abonnieren.', 'social-portal' ), 301 );
+				psf_ajax_response( false, __( 'Bitte melde Dich an, um dieses Forum zu abonnieren.', 'social-portal' ), 301 );
 			}
 
 			// Get user and forum data
-			$user_id = bbp_get_current_user_id();
+			$user_id = psf_get_current_user_id();
 			$id      = intval( $_POST['id'] );
 
 			// Bail if user cannot add favorites for this user
 			if ( ! current_user_can( 'edit_user', $user_id ) ) {
-				bbp_ajax_response( false, __( 'Du hast keine Erlaubnis das zu tun.', 'social-portal' ), 302 );
+				psf_ajax_response( false, __( 'Du hast keine Erlaubnis das zu tun.', 'social-portal' ), 302 );
 			}
 
 			// Get the forum
-			$forum = bbp_get_forum( $id );
+			$forum = psf_get_forum( $id );
 
 			// Bail if forum cannot be found
 			if ( empty( $forum ) ) {
-				bbp_ajax_response( false, __( 'Das Forum konnte nicht gefunden werden.', 'social-portal' ), 303 );
+				psf_ajax_response( false, __( 'Das Forum konnte nicht gefunden werden.', 'social-portal' ), 303 );
 			}
 
 			// Bail if user did not take this action
 			if ( ! isset( $_POST['nonce'] ) || ! wp_verify_nonce( $_POST['nonce'], 'toggle-subscription_' . $forum->ID ) ) {
-				bbp_ajax_response( false, __( 'Bist du sicher, dass du das tun wolltest?', 'social-portal' ), 304 );
+				psf_ajax_response( false, __( 'Bist du sicher, dass du das tun wolltest?', 'social-portal' ), 304 );
 			}
 
 			// Take action
-			$status = bbp_is_user_subscribed( $user_id, $forum->ID ) ? bbp_remove_user_subscription( $user_id, $forum->ID ) : bbp_add_user_subscription( $user_id, $forum->ID );
+			$status = psf_is_user_subscribed( $user_id, $forum->ID ) ? psf_remove_user_subscription( $user_id, $forum->ID ) : psf_add_user_subscription( $user_id, $forum->ID );
 
 			// Bail if action failed
 			if ( empty( $status ) ) {
-				bbp_ajax_response( false, __( 'Die Anfrage war nicht erfolgreich. Bitte versuche es erneut.', 'social-portal' ), 305 );
+				psf_ajax_response( false, __( 'Die Anfrage war nicht erfolgreich. Bitte versuche es erneut.', 'social-portal' ), 305 );
 			}
 
 			// Put subscription attributes in convenient array
@@ -403,65 +403,65 @@ if ( ! class_exists( 'BBP_Default' ) ) :
 			);
 
 			// Action succeeded
-			bbp_ajax_response( true, bbp_get_forum_subscription_link( $attrs, $user_id, false ), 200 );
+			psf_ajax_response( true, psf_get_forum_subscription_link( $attrs, $user_id, false ), 200 );
 		}
 
 		/**
 		 * AJAX handler to add or remove a topic from a user's favorites
 		 *
-		 * @since bbPress (r3732)
+		 * @since PSForum (r3732)
 		 *
-		 * @uses bbp_is_favorites_active() To check if favorites are active
-		 * @uses bbp_is_user_logged_in() To check if user is logged in
-		 * @uses bbp_get_current_user_id() To get the current user id
+		 * @uses psf_is_favorites_active() To check if favorites are active
+		 * @uses psf_is_user_logged_in() To check if user is logged in
+		 * @uses psf_get_current_user_id() To get the current user id
 		 * @uses current_user_can() To check if the current user can edit the user
-		 * @uses bbp_get_topic() To get the topic
+		 * @uses psf_get_topic() To get the topic
 		 * @uses wp_verify_nonce() To verify the nonce & check the referer
-		 * @uses bbp_is_user_favorite() To check if the topic is user's favorite
-		 * @uses bbp_remove_user_favorite() To remove the topic from user's favorites
-		 * @uses bbp_add_user_favorite() To add the topic from user's favorites
-		 * @uses bbp_ajax_response() To return JSON
+		 * @uses psf_is_user_favorite() To check if the topic is user's favorite
+		 * @uses psf_remove_user_favorite() To remove the topic from user's favorites
+		 * @uses psf_add_user_favorite() To add the topic from user's favorites
+		 * @uses psf_ajax_response() To return JSON
 		 */
 		public function ajax_favorite() {
 
 			// Bail if favorites are not active
-			if ( ! bbp_is_favorites_active() ) {
-				bbp_ajax_response( false, __( 'Favoriten sind nicht mehr aktiv.', 'social-portal' ), 300 );
+			if ( ! psf_is_favorites_active() ) {
+				psf_ajax_response( false, __( 'Favoriten sind nicht mehr aktiv.', 'social-portal' ), 300 );
 			}
 
 			// Bail if user is not logged in
 			if ( ! is_user_logged_in() ) {
-				bbp_ajax_response( false, __( 'Bitte melde Dich an, um dieses Thema zu einem Favoriten zu machen.', 'social-portal' ), 301 );
+				psf_ajax_response( false, __( 'Bitte melde Dich an, um dieses Thema zu einem Favoriten zu machen.', 'social-portal' ), 301 );
 			}
 
 			// Get user and topic data
-			$user_id = bbp_get_current_user_id();
+			$user_id = psf_get_current_user_id();
 			$id      = ! empty( $_POST['id'] ) ? intval( $_POST['id'] ) : 0;
 
 			// Bail if user cannot add favorites for this user
 			if ( ! current_user_can( 'edit_user', $user_id ) ) {
-				bbp_ajax_response( false, __( 'Du hast keine Erlaubnis das zu tun.', 'social-portal' ), 302 );
+				psf_ajax_response( false, __( 'Du hast keine Erlaubnis das zu tun.', 'social-portal' ), 302 );
 			}
 
 			// Get the topic
-			$topic = bbp_get_topic( $id );
+			$topic = psf_get_topic( $id );
 
 			// Bail if topic cannot be found
 			if ( empty( $topic ) ) {
-				bbp_ajax_response( false, __( 'Das Thema konnte nicht gefunden werden.', 'social-portal' ), 303 );
+				psf_ajax_response( false, __( 'Das Thema konnte nicht gefunden werden.', 'social-portal' ), 303 );
 			}
 
 			// Bail if user did not take this action
 			if ( ! isset( $_POST['nonce'] ) || ! wp_verify_nonce( $_POST['nonce'], 'toggle-favorite_' . $topic->ID ) ) {
-				bbp_ajax_response( false, __( 'Bist du sicher, dass du das tun wolltest?', 'social-portal' ), 304 );
+				psf_ajax_response( false, __( 'Bist du sicher, dass du das tun wolltest?', 'social-portal' ), 304 );
 			}
 
 			// Take action
-			$status = bbp_is_user_favorite( $user_id, $topic->ID ) ? bbp_remove_user_favorite( $user_id, $topic->ID ) : bbp_add_user_favorite( $user_id, $topic->ID );
+			$status = psf_is_user_favorite( $user_id, $topic->ID ) ? psf_remove_user_favorite( $user_id, $topic->ID ) : psf_add_user_favorite( $user_id, $topic->ID );
 
 			// Bail if action failed
 			if ( empty( $status ) ) {
-				bbp_ajax_response( false, __( 'Die Anfrage war nicht erfolgreich. Bitte versuche es erneut.', 'social-portal' ), 305 );
+				psf_ajax_response( false, __( 'Die Anfrage war nicht erfolgreich. Bitte versuche es erneut.', 'social-portal' ), 305 );
 			}
 
 			// Put subscription attributes in convenient array
@@ -471,65 +471,65 @@ if ( ! class_exists( 'BBP_Default' ) ) :
 			);
 
 			// Action succeeded
-			bbp_ajax_response( true, bbp_get_user_favorites_link( $attrs, $user_id, false ), 200 );
+			psf_ajax_response( true, psf_get_user_favorites_link( $attrs, $user_id, false ), 200 );
 		}
 
 		/**
 		 * AJAX handler to Subscribe/Unsubscribe a user from a topic
 		 *
-		 * @since bbPress (r3732)
+		 * @since PSForum (r3732)
 		 *
-		 * @uses bbp_is_subscriptions_active() To check if the subscriptions are active
-		 * @uses bbp_is_user_logged_in() To check if user is logged in
-		 * @uses bbp_get_current_user_id() To get the current user id
+		 * @uses psf_is_subscriptions_active() To check if the subscriptions are active
+		 * @uses psf_is_user_logged_in() To check if user is logged in
+		 * @uses psf_get_current_user_id() To get the current user id
 		 * @uses current_user_can() To check if the current user can edit the user
-		 * @uses bbp_get_topic() To get the topic
+		 * @uses psf_get_topic() To get the topic
 		 * @uses wp_verify_nonce() To verify the nonce
-		 * @uses bbp_is_user_subscribed() To check if the topic is in user's subscriptions
-		 * @uses bbp_remove_user_subscriptions() To remove the topic from user's subscriptions
-		 * @uses bbp_add_user_subscriptions() To add the topic from user's subscriptions
-		 * @uses bbp_ajax_response() To return JSON
+		 * @uses psf_is_user_subscribed() To check if the topic is in user's subscriptions
+		 * @uses psf_remove_user_subscriptions() To remove the topic from user's subscriptions
+		 * @uses psf_add_user_subscriptions() To add the topic from user's subscriptions
+		 * @uses psf_ajax_response() To return JSON
 		 */
 		public function ajax_subscription() {
 
 			// Bail if subscriptions are not active
-			if ( ! bbp_is_subscriptions_active() ) {
-				bbp_ajax_response( false, __( 'Abonnements sind nicht mehr aktiv.', 'social-portal' ), 300 );
+			if ( ! psf_is_subscriptions_active() ) {
+				psf_ajax_response( false, __( 'Abonnements sind nicht mehr aktiv.', 'social-portal' ), 300 );
 			}
 
 			// Bail if user is not logged in
 			if ( ! is_user_logged_in() ) {
-				bbp_ajax_response( false, __( 'Bitte melde Dich an, um dieses Thema zu abonnieren.', 'social-portal' ), 301 );
+				psf_ajax_response( false, __( 'Bitte melde Dich an, um dieses Thema zu abonnieren.', 'social-portal' ), 301 );
 			}
 
 			// Get user and topic data
-			$user_id = bbp_get_current_user_id();
+			$user_id = psf_get_current_user_id();
 			$id      = intval( $_POST['id'] );
 
 			// Bail if user cannot add favorites for this user
 			if ( ! current_user_can( 'edit_user', $user_id ) ) {
-				bbp_ajax_response( false, __( 'Du hast keine Erlaubnis das zu tun.', 'social-portal' ), 302 );
+				psf_ajax_response( false, __( 'Du hast keine Erlaubnis das zu tun.', 'social-portal' ), 302 );
 			}
 
 			// Get the topic
-			$topic = bbp_get_topic( $id );
+			$topic = psf_get_topic( $id );
 
 			// Bail if topic cannot be found
 			if ( empty( $topic ) ) {
-				bbp_ajax_response( false, __( 'Das Thema konnte nicht gefunden werden.', 'social-portal' ), 303 );
+				psf_ajax_response( false, __( 'Das Thema konnte nicht gefunden werden.', 'social-portal' ), 303 );
 			}
 
 			// Bail if user did not take this action
 			if ( ! isset( $_POST['nonce'] ) || ! wp_verify_nonce( $_POST['nonce'], 'toggle-subscription_' . $topic->ID ) ) {
-				bbp_ajax_response( false, __( 'Bist du sicher, dass du das tun wolltest?', 'social-portal' ), 304 );
+				psf_ajax_response( false, __( 'Bist du sicher, dass du das tun wolltest?', 'social-portal' ), 304 );
 			}
 
 			// Take action
-			$status = bbp_is_user_subscribed( $user_id, $topic->ID ) ? bbp_remove_user_subscription( $user_id, $topic->ID ) : bbp_add_user_subscription( $user_id, $topic->ID );
+			$status = psf_is_user_subscribed( $user_id, $topic->ID ) ? psf_remove_user_subscription( $user_id, $topic->ID ) : psf_add_user_subscription( $user_id, $topic->ID );
 
 			// Bail if action failed
 			if ( empty( $status ) ) {
-				bbp_ajax_response( false, __( 'Die Anfrage war nicht erfolgreich. Bitte versuche es erneut.', 'social-portal' ), 305 );
+				psf_ajax_response( false, __( 'Die Anfrage war nicht erfolgreich. Bitte versuche es erneut.', 'social-portal' ), 305 );
 			}
 
 			// Put subscription attributes in convenient array
@@ -539,9 +539,9 @@ if ( ! class_exists( 'BBP_Default' ) ) :
 			);
 
 			// Action succeeded
-			bbp_ajax_response( true, bbp_get_user_subscribe_link( $attrs, $user_id, false ), 200 );
+			psf_ajax_response( true, psf_get_user_subscribe_link( $attrs, $user_id, false ), 200 );
 		}
 	}
 
-	new BBP_Default();
+	new PSF_Default();
 endif;

@@ -115,9 +115,9 @@
 				}
 			} );
 		}
-		// for bbpress.
-		$( '.bbp-template-notice' ).each( function() {
-			$( this ).prepend( '<div class="bbp-template-notice-icon"><span class="icon"></span>' );
+		// for psforum.
+		$( '.psf-template-notice' ).each( function() {
+			$( this ).prepend( '<div class="psf-template-notice-icon"><span class="icon"></span>' );
 		} );
 	} );// end of domready.
 

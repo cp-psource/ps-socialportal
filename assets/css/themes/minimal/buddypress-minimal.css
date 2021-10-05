@@ -429,8 +429,8 @@ div.activity-comments form .ac-textarea {
 /* =Forum
 -------------------------------------------------------------- */
 /*
-.activity-list li.bbp_topic_create .activity-content .activity-inner,
-.activity-list li.bbp_reply_create .activity-content .activity-inner,
+.activity-list li.psf_topic_create .activity-content .activity-inner,
+.activity-list li.psf_reply_create .activity-content .activity-inner,
 .activity-list li.new_forum_post .activity-content .activity-inner,
 .activity-list li.new_forum_topic .activity-content .activity-inner {
   border-left: 2px solid #eaeaea;

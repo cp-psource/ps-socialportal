@@ -141,7 +141,7 @@
 	$( window ).resize( function() {
 		// resizing is only required for equal heights.
 		// for masonry, the masonry plugin does it on their own.
-		if ( CBBPSettings.itemListDisplayType === 'equalheight' ) {
+		if ( CPSFSettings.itemListDisplayType === 'equalheight' ) {
 			CB.DOM.ItemList.updateItemListLayout( 'body' );
 		}
 	} );
@@ -323,7 +323,7 @@
 				directoryPreferences[object] = this.rebuildObjectPreferences();
 			}
 
-			if ( CBBPSettings.storeFilterSettings ) {
+			if ( CPSFSettings.storeFilterSettings ) {
 				directoryPreferences[object][pref] = $.cookie( 'bp-' + object + '-' + pref );
 			}
 
@@ -354,7 +354,7 @@
 				directoryPreferences[object] = newPreferences;
 			}
 
-			if ( CBBPSettings.storeFilterSettings ) {
+			if ( CPSFSettings.storeFilterSettings ) {
 				$.cookie( 'bp-' + object + '-' + pref, value, {
 					path: '/',
 					secure: ( 'https:' === window.location.protocol )
@@ -410,12 +410,12 @@
 		 * @param target
 		 */
 		updateItemListLayout: function( target ) {
-			var type = CBBPSettings.itemListDisplayType;
+			var type = CPSFSettings.itemListDisplayType;
 			if ( type !== 'grid' ) {
 				return;
 			}
 
-			var gridType = CBBPSettings.itemListGridType;//bp_item_list_display_type;
+			var gridType = CPSFSettings.itemListGridType;//bp_item_list_display_type;
 			if ( 'equalheight' === gridType ) {
 				this.makeEqualHeightItems( target );
 			} else if ( 'masonry' === gridType ) {
@@ -767,7 +767,7 @@
 			var $itemListContainer = $this.parents( '.item-list-container' ),
 				$nav = $( '.bp-nav' ).last(),
 				object = $itemListContainer.data( 'object' ),
-				//currentContext = $itemListContainer.data('context') || CBBPSettings.currentContext,
+				//currentContext = $itemListContainer.data('context') || CPSFSettings.currentContext,
 				searchTerms = false,
 				paginationID = $pagination.find( '.pagination-links' ).attr( 'id' ),
 				template = null,
@@ -1085,7 +1085,7 @@
 			if ( ! commentsDivs.length ) {
 				return false;
 			}
-			//CBBPSettings.maxVisibleComments;
+			//CPSFSettings.maxVisibleComments;
 			commentsDivs.each( function() {
 				if ( $( this ).children( 'ul' ).children( 'li' ).length < maxVisibleComments ) {
 					return;
@@ -1106,7 +1106,7 @@
 						$( this ).hide();
 
 						if ( ! i ) {
-							$( this ).before( '<li class="show-all-comments"><a href="#' + parentActivity.attr( 'id' ) + '/show-all/">' + CBBPSettings.showXComments.replace( '%d', commentCount ) + '</a></li>' );
+							$( this ).before( '<li class="show-all-comments"><a href="#' + parentActivity.attr( 'id' ) + '/show-all/">' + CPSFSettings.showXComments.replace( '%d', commentCount ) + '</a></li>' );
 						}
 					}
 				} );
@@ -1637,8 +1637,8 @@
 		// Activity HeartBeat ************************************************
 
 		// Set the interval and the namespace event
-		if ( typeof wp !== 'undefined' && typeof wp.heartbeat !== 'undefined' && typeof CBBPSettings.pulse !== 'undefined' ) {
-			wp.heartbeat.interval( Number( CBBPSettings.pulse ) );
+		if ( typeof wp !== 'undefined' && typeof wp.heartbeat !== 'undefined' && typeof CPSFSettings.pulse !== 'undefined' ) {
+			wp.heartbeat.interval( Number( CPSFSettings.pulse ) );
 
 			$.fn.extend( {
 				'heartbeat-send': function() {
@@ -1696,7 +1696,7 @@
 				return;
 			}
 
-			$( '.activity-list' ).prepend( '<li class="load-newest"><a href="#newest">' + CBBPSettings.newest + '</a></li>' );
+			$( '.activity-list' ).prepend( '<li class="load-newest"><a href="#newest">' + CPSFSettings.newest + '</a></li>' );
 		} );
 	} ); // end of dom ready.
 }( CB || {}, jQuery ) );
@@ -2122,7 +2122,7 @@
 				// Increment the 'Show all x comments' string, if present
 				$showAllAnchor = $activityComments.parents( '.activity-comments' ).find( '.show-all-comments a' );
 				if ( $showAllAnchor ) {
-					$showAllAnchor.html( CBBPSettings.showXComments.replace( '%d', newCount ) );
+					$showAllAnchor.html( CPSFSettings.showXComments.replace( '%d', newCount ) );
 				}
 
 				target.prop( 'disabled', false );
@@ -2177,7 +2177,7 @@
 				// Change the 'Show all x comments' text
 				showAllAnchor = comment.parents( '.activity-comments' ).find( '.show-all-comments a' );
 				if ( showAllAnchor ) {
-					showAllAnchor.html( CBBPSettings.showXComments.replace( '%d', newCount ) );
+					showAllAnchor.html( CPSFSettings.showXComments.replace( '%d', newCount ) );
 				}
 
 				//If that was the last comment for the item, remove the has-comments class to clean up the styling
@@ -2454,7 +2454,7 @@
 
 			window.onbeforeunload = function( e ) {
 				if ( shouldconfirm ) {
-					return CBBPSettings.unsaved_changes;
+					return CPSFSettings.unsaved_changes;
 				}
 			};
 		} );

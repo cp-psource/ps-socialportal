@@ -19,7 +19,7 @@ $theme_styles   = array(
 			'stylesheets' => array(
 				'theme'      => $stylesheet_uri . '/assets/css/themes/minimal/theme-minimal.css',
 				'buddypress' => $stylesheet_uri . '/assets/css/themes/minimal/buddypress-minimal.css',
-				'bbpress'    => $stylesheet_uri . '/assets/css/themes/minimal/bbpress-minimal.css', // k, v.
+				'psforum'    => $stylesheet_uri . '/assets/css/themes/minimal/psforum-minimal.css', // k, v.
 
 			),
 			'palette'     => array( '#ffffff', '#000000', '#e5e5e5', '#f61ca6', '#cffc5b' ),
@@ -37,7 +37,7 @@ $theme_styles   = array(
 			'stylesheets' => array(
 				'theme'      => $stylesheet_uri . '/assets/css/themes/facy-blue/theme-facy-blue.css',
 				'buddypress' => $stylesheet_uri . '/assets/css/themes/facy-blue/buddypress-facy-blue.css',
-				'bbpress'    => $stylesheet_uri . '/assets/css/themes/facy-blue/bbpress-facy-blue.css',
+				'psforum'    => $stylesheet_uri . '/assets/css/themes/facy-blue/psforum-facy-blue.css',
 			),
 			'settings'    => array(
 				'main-menu-selected-item-color'               => '#fff',

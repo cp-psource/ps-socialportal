@@ -518,8 +518,8 @@
 		// Activity HeartBeat ************************************************
 
 		// Set the interval and the namespace event
-		if ( typeof wp !== 'undefined' && typeof wp.heartbeat !== 'undefined' && typeof CBBPSettings.pulse !== 'undefined' ) {
-			wp.heartbeat.interval( Number( CBBPSettings.pulse ) );
+		if ( typeof wp !== 'undefined' && typeof wp.heartbeat !== 'undefined' && typeof CPSFSettings.pulse !== 'undefined' ) {
+			wp.heartbeat.interval( Number( CPSFSettings.pulse ) );
 
 			$.fn.extend( {
 				'heartbeat-send': function() {
@@ -577,7 +577,7 @@
 				return;
 			}
 
-			$( '.activity-list' ).prepend( '<li class="load-newest"><a href="#newest">' + CBBPSettings.newest + '</a></li>' );
+			$( '.activity-list' ).prepend( '<li class="load-newest"><a href="#newest">' + CPSFSettings.newest + '</a></li>' );
 		} );
 	} ); // end of dom ready.
 }( CB || {}, jQuery ) );

@@ -58,7 +58,7 @@
 
 			window.onbeforeunload = function( e ) {
 				if ( shouldconfirm ) {
-					return CBBPSettings.unsaved_changes;
+					return CPSFSettings.unsaved_changes;
 				}
 			};
 		} );

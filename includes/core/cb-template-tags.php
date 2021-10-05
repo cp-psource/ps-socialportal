@@ -470,8 +470,8 @@ if ( ! function_exists( 'cb_breadcrumb' ) ) :
 			bcn_display();
 		} elseif ( function_exists( 'breadcrumb_trail' ) ) {
 			breadcrumb_trail( cb_get_breadcrumb_args() );
-		} elseif ( cb_is_bbp_active() && is_bbpress() ) {
-			bbp_breadcrumb(); // worst case, always show bbp breadcrumb.
+		} elseif ( cb_is_psf_active() && is_psforum() ) {
+			psf_breadcrumb(); // worst case, always show psf breadcrumb.
 		} elseif ( cb_is_wc_active() && is_woocommerce() ) {
 			woocommerce_breadcrumb();
 		}

@@ -63,33 +63,33 @@
   font-size: 14px;
 }
 
-.bbp-template-notice {
+.psf-template-notice {
   display: flex;
   padding: 0 !important;
 }
 
-.bbp-template-notice {
+.psf-template-notice {
   background: #fff9db;
 }
-.bbp-template-notice ul {
+.psf-template-notice ul {
   padding: 20px 10px;
 }
-.bbp-template-notice .bbp-template-notice-icon {
+.psf-template-notice .psf-template-notice-icon {
   display: flex;
   align-items: center;
   margin: 0;
 }
 
-.bbp-template-notice-icon {
+.psf-template-notice-icon {
   padding: 20px 10px;
   background: #f9e596;
 }
 
-.info .bbp-template-notice-icon {
+.info .psf-template-notice-icon {
   background: #74c0fc;
 }
 
-.bbp-template-notice.info {
+.psf-template-notice.info {
   background: #cce5ff;
 }
 

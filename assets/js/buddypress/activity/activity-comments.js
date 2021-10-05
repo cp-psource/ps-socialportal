@@ -115,7 +115,7 @@
 				// Increment the 'Show all x comments' string, if present
 				$showAllAnchor = $activityComments.parents( '.activity-comments' ).find( '.show-all-comments a' );
 				if ( $showAllAnchor ) {
-					$showAllAnchor.html( CBBPSettings.showXComments.replace( '%d', newCount ) );
+					$showAllAnchor.html( CPSFSettings.showXComments.replace( '%d', newCount ) );
 				}
 
 				target.prop( 'disabled', false );
@@ -170,7 +170,7 @@
 				// Change the 'Show all x comments' text
 				showAllAnchor = comment.parents( '.activity-comments' ).find( '.show-all-comments a' );
 				if ( showAllAnchor ) {
-					showAllAnchor.html( CBBPSettings.showXComments.replace( '%d', newCount ) );
+					showAllAnchor.html( CPSFSettings.showXComments.replace( '%d', newCount ) );
 				}
 
 				//If that was the last comment for the item, remove the has-comments class to clean up the styling

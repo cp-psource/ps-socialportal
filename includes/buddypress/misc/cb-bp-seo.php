@@ -84,10 +84,10 @@ function bpdev_bp_items_metadesc( $desc ) {
 		$desc  = $group->description;
 
 		// are we looking for forum?
-		if ( bp_is_current_action( 'forum' ) && function_exists( 'bbpress' ) ) {
+		if ( bp_is_current_action( 'forum' ) && function_exists( 'psforum' ) ) {
 
 			// we will get an array of ids.
-			$forum_ids = bbp_get_group_forum_ids();
+			$forum_ids = psf_get_group_forum_ids();
 
 			if ( $forum_ids ) {
 				$post_id = array_pop( $forum_ids );
@@ -99,7 +99,7 @@ function bpdev_bp_items_metadesc( $desc ) {
 				// get the topic as post.
 				$topics = get_posts( array(
 					'name'      => bp_action_variable( 1 ),
-					'post_type' => bbp_get_topic_post_type(),
+					'post_type' => psf_get_topic_post_type(),
 					'per_page'  => 1,
 				) );
 				// get the id.

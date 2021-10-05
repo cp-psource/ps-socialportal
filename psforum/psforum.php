@@ -1,6 +1,6 @@
 <?php
 /**
- * PS SocialPortal Default Page template for all bbPress forum contents.
+ * PS SocialPortal Default Page template for all PSForum forum contents.
  *
  * @package    PS_SocialPortal
  * @subpackage Template
@@ -13,7 +13,7 @@
 defined( 'ABSPATH' ) || exit;
 
 ?>
-<?php get_header( 'bbpress' ); ?>
+<?php get_header( 'psforum' ); ?>
 
 	<div id="site-container" class="<?php cb_site_container_class(); ?>"><!-- section container -->
 
@@ -30,8 +30,8 @@ defined( 'ABSPATH' ) || exit;
 
 			<?php do_action( 'cb_before_site_content' ); ?>
 
-			<section id="site-content" class="<?php cb_site_content_class( 'bbp-content' ); ?>">
-				<div id="site-content-inner" class="site-content-inner bbp-content-inner">
+			<section id="site-content" class="<?php cb_site_content_class( 'psf-content' ); ?>">
+				<div id="site-content-inner" class="site-content-inner psf-content-inner">
 					<?php do_action( 'cb_before_site_content_contents' ); ?>
 
 					<?php do_action( 'cb_before_page_contents' ); ?>
@@ -42,7 +42,7 @@ defined( 'ABSPATH' ) || exit;
 						while ( have_posts() ) :
 							the_post();
 
-							cb_get_template_part( 'template-parts/entry', 'bbpress', 'bbpress' );
+							cb_get_template_part( 'template-parts/entry', 'psforum', 'psforum' );
 
 							// If comments are open or we have at least one comment, load up the comment template.
 							if ( comments_open() || get_comments_number() ) :
@@ -65,7 +65,7 @@ defined( 'ABSPATH' ) || exit;
 
 			<?php do_action( 'cb_after_site_content' ); ?>
 
-			<?php get_sidebar( 'bbpress' ); ?>
+			<?php get_sidebar( 'psforum' ); ?>
 
 		</div><!-- .inner -->
 
@@ -74,4 +74,4 @@ defined( 'ABSPATH' ) || exit;
 	</div> <!-- #container -->
 
 <?php
-get_footer( 'bbpress' );
+get_footer( 'psforum' );

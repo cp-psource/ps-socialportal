@@ -38,7 +38,7 @@
 			if ( ! commentsDivs.length ) {
 				return false;
 			}
-			//CBBPSettings.maxVisibleComments;
+			//CPSFSettings.maxVisibleComments;
 			commentsDivs.each( function() {
 				if ( $( this ).children( 'ul' ).children( 'li' ).length < maxVisibleComments ) {
 					return;
@@ -59,7 +59,7 @@
 						$( this ).hide();
 
 						if ( ! i ) {
-							$( this ).before( '<li class="show-all-comments"><a href="#' + parentActivity.attr( 'id' ) + '/show-all/">' + CBBPSettings.showXComments.replace( '%d', commentCount ) + '</a></li>' );
+							$( this ).before( '<li class="show-all-comments"><a href="#' + parentActivity.attr( 'id' ) + '/show-all/">' + CPSFSettings.showXComments.replace( '%d', commentCount ) + '</a></li>' );
 						}
 					}
 				} );

@@ -189,11 +189,11 @@ function cb_is_bp_active() {
 }
 
 /**
- * Is bbPress Active?
+ * Is PSForum Active?
  *
  * @return bool
  */
-function cb_is_bbp_active() {
+function cb_is_psf_active() {
 
 	static $is_active;
 
@@ -201,7 +201,7 @@ function cb_is_bbp_active() {
 		return $is_active;
 	}
 
-	if ( function_exists( 'bbpress' ) ) {
+	if ( function_exists( 'psforum' ) ) {
 		$is_active = true;
 	} else {
 		$is_active = false;

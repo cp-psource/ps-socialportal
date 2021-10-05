@@ -4,7 +4,7 @@
 
 		// Confirmation when clicking Leave Group in group headers
 		$( document ).on( 'click', '.group-button .leave-group', function() {
-			if ( false === confirm( CBBPSettings.leaveGroupConfirm ) ) {
+			if ( false === confirm( CPSFSettings.leaveGroupConfirm ) ) {
 				return false;
 			}
 		} );
@@ -23,7 +23,7 @@
 
 			// Leave Group confirmation within directories - must intercept
 			// AJAX request
-			if ( thelink.hasClass( 'leave-group' ) && false === confirm( CBBPSettings.leave_group_confirm ) ) {
+			if ( thelink.hasClass( 'leave-group' ) && false === confirm( CPSFSettings.leave_group_confirm ) ) {
 				return false;
 			}
 

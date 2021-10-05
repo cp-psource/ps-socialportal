@@ -7,17 +7,17 @@ Stable tag: 2.1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-PS SocialPortal ist ein schnelles, optimiertes und schön codiertes Theme zum Erstellen von BuddyPress-Communitys und WordPress, bbPress, WooCommerce Webseiten.
+PS SocialPortal ist ein schnelles, optimiertes und schön codiertes Theme zum Erstellen von BuddyPress-Communitys und WordPress, PSForum, WooCommerce Webseiten.
 
 == Description ==
-Mit PS SocialPortal kannst Du mit WordPress, BuddyPress, bbPress und WooCommerce großartige Communitys erstellen.
+Mit PS SocialPortal kannst Du mit WordPress, BuddyPress, PSForum und WooCommerce großartige Communitys erstellen.
 Es ist schnell, sauber codiert, einfach zu bedienen und einfach zu erweitern. Mit über 500 benutzerdefinierten Steuerelementen zum Anpassen aller Aspekte des Themes.
 
 Du kannst PS SocialPortal verwenden, um
  * Erstelle BuddyPress-Communities. Du wirst das schöne Design und die Funktionen lieben.
  * Jede Art von WordPress-Seite. Du kannst Dich in die Geschwindigkeit und Flexibilität verlieben.
  * WooCommerce-basierter E-Commerce-Shop/Websites.
- * bbPress Foren.
+ * PSForum Foren.
  * und jede andere Art, die Du für richtig hältst.
 
 Es ist ein vielseitiges WordPress-Theme, mit dem Blogs, Unternehmensseiten, soziale Communities (mit BuddyPress) erstellt werden können

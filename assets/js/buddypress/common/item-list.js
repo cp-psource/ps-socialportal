@@ -8,12 +8,12 @@
 		 * @param target
 		 */
 		updateItemListLayout: function( target ) {
-			var type = CBBPSettings.itemListDisplayType;
+			var type = CPSFSettings.itemListDisplayType;
 			if ( type !== 'grid' ) {
 				return;
 			}
 
-			var gridType = CBBPSettings.itemListGridType;//bp_item_list_display_type;
+			var gridType = CPSFSettings.itemListGridType;//bp_item_list_display_type;
 			if ( 'equalheight' === gridType ) {
 				this.makeEqualHeightItems( target );
 			} else if ( 'masonry' === gridType ) {

@@ -18,7 +18,7 @@
 			var $itemListContainer = $this.parents( '.item-list-container' ),
 				$nav = $( '.bp-nav' ).last(),
 				object = $itemListContainer.data( 'object' ),
-				//currentContext = $itemListContainer.data('context') || CBBPSettings.currentContext,
+				//currentContext = $itemListContainer.data('context') || CPSFSettings.currentContext,
 				searchTerms = false,
 				paginationID = $pagination.find( '.pagination-links' ).attr( 'id' ),
 				template = null,

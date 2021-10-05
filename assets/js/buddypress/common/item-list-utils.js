@@ -34,7 +34,7 @@
 				directoryPreferences[object] = this.rebuildObjectPreferences();
 			}
 
-			if ( CBBPSettings.storeFilterSettings ) {
+			if ( CPSFSettings.storeFilterSettings ) {
 				directoryPreferences[object][pref] = $.cookie( 'bp-' + object + '-' + pref );
 			}
 
@@ -65,7 +65,7 @@
 				directoryPreferences[object] = newPreferences;
 			}
 
-			if ( CBBPSettings.storeFilterSettings ) {
+			if ( CPSFSettings.storeFilterSettings ) {
 				$.cookie( 'bp-' + object + '-' + pref, value, {
 					path: '/',
 					secure: ( 'https:' === window.location.protocol )

@@ -128,7 +128,7 @@
 	$( window ).resize( function() {
 		// resizing is only required for equal heights.
 		// for masonry, the masonry plugin does it on their own.
-		if ( CBBPSettings.itemListDisplayType === 'equalheight' ) {
+		if ( CPSFSettings.itemListDisplayType === 'equalheight' ) {
 			CB.DOM.ItemList.updateItemListLayout( 'body' );
 		}
 	} );

@@ -203,7 +203,7 @@ do_action( 'bp_before_create_group_page' );
 					<?php elseif ( is_super_admin() ) : ?>
 						<p><?php
                             /* translators: %s: Forum setup url */
-                            printf( __( '<strong>Achtung Seitensdmin:</strong> Gruppenforen erfordern die <a href="%s">korrekte Einrichtung und Konfiguration</a> einer bbPress-Installation.', 'social-portal' ), bp_core_do_network_admin() ? network_admin_url( 'settings.php?page=bb-forums-setup' ) :  admin_url( 'admin.php?page=bb-forums-setup' ) ); ?>
+                            printf( __( '<strong>Achtung Seitensdmin:</strong> Gruppenforen erfordern die <a href="%s">korrekte Einrichtung und Konfiguration</a> einer PSForum-Installation.', 'social-portal' ), bp_core_do_network_admin() ? network_admin_url( 'settings.php?page=bb-forums-setup' ) :  admin_url( 'admin.php?page=bb-forums-setup' ) ); ?>
                         </p>
 					<?php endif; ?>
 

@@ -293,7 +293,7 @@ if ( ! class_exists( 'BP_Legacy' ) ) :
 				'currentContext'    => $context,
 			);
 			$settings = apply_filters( 'bp_core_get_js_strings', $settings );
-			wp_localize_script( $asset['handle'], 'CBBPSettings', $settings );
+			wp_localize_script( $asset['handle'], 'CPSFSettings', $settings );
 
 		}
 
