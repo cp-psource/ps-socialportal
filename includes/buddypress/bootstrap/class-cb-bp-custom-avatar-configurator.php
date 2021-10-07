@@ -42,7 +42,9 @@ class CB_BP_Custom_Avatar_Configurator {
 
 		// fetch or not the custom avatar.
 		add_filter( 'bp_core_fetch_avatar_no_grav', array( $this, 'toggle_gravatar_fetch' ), 10, 2 );
-		add_filter( 'bp_core_avatar_default', array( $this, 'set_default_avatar' ), 10, 2 );
+		/* BP Depracated Avatar Fix */
+		//add_filter( 'bp_core_avatar_default', array( $this, 'set_default_avatar' ), 10, 2 );
+		add_filter( 'bp_core_default_avatar', array( $this, 'set_default_avatar' ), 10, 2 );
 		add_filter( 'bp_core_avatar_thumb', array( $this, 'set_default_avatar' ), 10, 2 );
 		// for group default avatar.
 		add_filter( 'bp_core_default_avatar_group', array( $this, 'set_default_avatar' ), 10, 2 );
