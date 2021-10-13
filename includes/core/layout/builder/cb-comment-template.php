@@ -41,7 +41,7 @@ function cb_filter_comment_form_defaults( $default_labels ) {
 		'logged_in_as'  => '',
 		/* translators: %s: login url */
 		'must_log_in'   => '<p class="alert">' . sprintf( __( 'Du musst <a href="%1$s">angemeldet sein</a>, um einen Kommentar abgeben zu können.', 'social-portal' ), wp_login_url( get_permalink() ) ) . '</p>',
-		'title_reply'   => __( 'Leave a reply', 'social-portal' ),
+		'title_reply'   => __( 'Hinterlasse eine Antwort', 'social-portal' ),
 	);
 
 	return apply_filters( 'cb_comment_form_defaults', array_merge( $default_labels, $new_labels ) );

@@ -123,7 +123,7 @@
 				<?php do_action( 'psf_theme_before_topic_freshness_link' ); ?>
                 <?php _e('Letzter Beitrag:', 'social-portal');?>
 				<?php psf_topic_freshness_link(); ?>
-                <?php _e('by', 'social-portal');?>
+                <?php _e('von', 'social-portal');?>
 				<?php psf_author_link( array( 'post_id' => psf_get_topic_last_active_id(), 'type' => 'name' ) ); ?>
 				<?php do_action( 'psf_theme_after_topic_freshness_link' ); ?>
 
