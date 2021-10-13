@@ -60,6 +60,7 @@ Halte Dich mit unserem [Newsletter](https://n3rds.work/webmasterservice-n3rdswor
 * Support für PSOURCE Mediathek (Comming Soon) integriert.
 * PS Forum Integration inkl. passenden Design
 * Depracated Avatar Fix
+* Textanpassung
 
 = 1.5.1 = 
 
