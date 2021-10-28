@@ -2,11 +2,11 @@
 /**
  * PS SocialPortal Single Post template.
  *
- * This template is also used as fallback for all custom post types.
+ * Diese Vorlage wird auch als Fallback für alle benutzerdefinierten Beitragstypen verwendet.
  *
  * @package    PS_SocialPortal
  * @subpackage Template
- * @copyright  Copyright (c) 2019, DerN3rd
+ * @copyright  Copyright (c) 2019-2021, DerN3rd
  * @license    https://www.gnu.org/licenses/gpl.html GNU Public License
  * @author     DerN3rd
  */
@@ -21,9 +21,9 @@ defined( 'ABSPATH' ) || exit;
 
 	<?php
 	/**
-	 * The hook 'cb_before_site_container_contents' is used to add feedback etc below the site header.
+	 * Der Hook 'cb_before_site_container_contents' wird verwendet, um Feedback usw. unter dem Site-Header hinzuzufügen.
 	 *
-	 * @see cb-page-builder.php for the details.
+	 * @see cb-page-builder.php für die Details.
 	 */
 	?>
 
@@ -48,12 +48,12 @@ defined( 'ABSPATH' ) || exit;
 
 						cb_get_template_part( 'template-parts/entry', get_post_type(), 'single' );
 
-						// If comments are open or we have at least one comment, load up the comment template.
+						// Wenn Kommentare offen sind oder wir mindestens einen Kommentar haben, lade die Kommentarvorlage hoch.
 						if ( comments_open() || get_comments_number() ) :
 							comments_template();
 						endif;
 
-					endwhile; // End of the loop.
+					endwhile; // Ende der Schleife.
 					?>
 
 					<?php cb_post_navigation(); ?>
