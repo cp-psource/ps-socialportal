@@ -58,6 +58,7 @@ Halte Dich mit unserem [Newsletter](https://n3rds.work/webmasterservice-n3rdswor
 = 1.5.5 =
 
 * PhP8 merge_array Fix
+* CSS Fix Widget:before Fix
 
 = 1.5.4 =
 

@@ -70,8 +70,8 @@
 }
 
 .psf-forum-title::before {
-  content: '\f086';
-  position: absolute;
+  content: '\f086' !important;
+  position: relative;
   left: 5px;
   display: none;
 }
