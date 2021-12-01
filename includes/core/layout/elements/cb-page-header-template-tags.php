@@ -34,15 +34,24 @@ function cb_get_page_header_image() {
 	$object_id = get_queried_object_id();
 	$image_url = '';
 
-	// is term archive?
-	if ( is_singular() ) {
+	// is term archive? PhP8 Fix
+	/*if ( is_singular() ) {
 		// Look for specific.
 		$image_url = get_post_meta( $object_id, 'cb-header-image', true );
 		if ( ! $image_url && cb_get_option( 'use-post-thumbnail-in-page-header' ) && has_post_thumbnail( $object_id ) ) {
 			$image_url = get_the_post_thumbnail_url( $object_id, 'cb-featured-page-header' );
 		}
 	} elseif ( is_category() || is_tax() ) {
-		$image_url = get_term_meta( $object_id, 'cb-header-image', true );
+		$image_url = get_term_meta( $object_id, 'cb-header-image', true );*/
+
+	if ( is_singular() ) {
+			// Look for specific.
+		$image_url = get_post_meta( 'cb-header-image', $object_id, true );
+		if ( ! $image_url && cb_get_option( 'use-post-thumbnail-in-page-header' ) && has_post_thumbnail( $object_id ) ) {
+			$image_url = get_the_post_thumbnail_url( 'cb-featured-page-header', $object_id );
+		}
+	} elseif ( is_category() || is_tax() ) {
+		$image_url = get_term_meta( 'cb-header-image', $object_id, true );
 
 		// fallback.
 		if ( ! $image_url ) {

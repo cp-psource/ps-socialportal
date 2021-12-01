@@ -55,6 +55,10 @@ Halte Dich mit unserem [Newsletter](https://n3rds.work/webmasterservice-n3rdswor
 
 == Changelog ==
 
+= 1.5.5 =
+
+* PhP8 merge_array Fix
+
 = 1.5.4 =
 
 * Support für PSOURCE Mediathek (Comming Soon) integriert.
