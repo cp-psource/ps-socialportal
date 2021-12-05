@@ -1877,7 +1877,6 @@ p > video {
 }
 .widget li > a:before {
   font-size: .8em;
-  content: "\f105";
 }
 
 .widget-title {
