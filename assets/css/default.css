@@ -1212,7 +1212,8 @@ figure {
 /* Some header row preset specific css.*/
 .site-header-row-preset-12 .site-header-block-right,
 .site-header-row-preset-13 .site-header-block-left {
-  text-align: center;
+  text-align: left;
+  display: inline-block;
 }
 
 .site-header-row-preset-5 .nav-menu {

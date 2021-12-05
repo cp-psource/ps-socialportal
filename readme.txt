@@ -59,6 +59,7 @@ Halte Dich mit unserem [Newsletter](https://n3rds.work/webmasterservice-n3rdswor
 
 * PhP8 merge_array Fix
 * CSS Fix Widget:before Fix
+* CSS Fix Header-Text Mobile
 
 = 1.5.4 =
 
