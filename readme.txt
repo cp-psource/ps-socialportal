@@ -3,7 +3,7 @@ Contributors: WMS N@W,dern3rd
 Tags: buddypress,left-sidebar, fixed-width, custom-background
 Requires at least: 5.0
 Tested up to: 5.6
-Stable tag: 1.5.4
+Stable tag: 1.5.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -60,6 +60,7 @@ Halte Dich mit unserem [Newsletter](https://n3rds.work/webmasterservice-n3rdswor
 * PhP8 merge_array Fix
 * CSS Fix Widget:before Fix
 * CSS Fix Header-Text Mobile
+* Hilfe und Dokumentationslinks korrigiert
 
 = 1.5.4 =
 

@@ -85,10 +85,10 @@ class CB_Admin_About {
 	 */
 	private function __construct() {
 		// changelog url.
-		$this->changelog_url = 'https://n3rds.work/docs/social-portal-changelog/';
-		$this->support_url   = 'https://n3rds.work/gruppen/psource-communityhub/forum/topic/ps-social-portal-theme-forum/#post-32241';
+		$this->changelog_url = 'https://n3rds.work/docs/ps-social-portal-changelog/';
+		$this->support_url   = 'https://n3rds.work/forums/forum/psource-support-foren/ps-social-portal-theme-supportforum/';
 		$this->demo_url      = 'https://n3rds.work/';
-		$this->docs_url      = 'https://n3rds.work/docs/social-portal-tutorials-erste-schritte/';
+		$this->docs_url      = 'https://n3rds.work/docs/social-portal-dokumentation/';
 		//$this->pro_url       = 'https://WMS N@W.com/themes/social-portal-pro/?utm_source=dashboard&utm_campaign=CommunityBuilderPro';
 	}
 
