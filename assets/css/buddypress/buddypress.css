@@ -33,11 +33,10 @@
 
 .bp-template-notice i.fa {
   cursor: pointer;
-  padding-left: 5px;
-  position: absolute;
+  padding-left: 15px;
+  position: relative;
   right: 5px;
   top: 50%;
-  transform: translateY(-50%);
 }
 
 .site-feedback-message {
