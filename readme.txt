@@ -61,6 +61,7 @@ Halte Dich mit unserem [Newsletter](https://n3rds.work/webmasterservice-n3rdswor
 * CSS Fix Widget:before Fix
 * CSS Fix Header-Text Mobile
 * Hilfe und Dokumentationslinks korrigiert
+* Standard CSS für PS-Mediathek hinzugefügt
 
 = 1.5.4 =
 
