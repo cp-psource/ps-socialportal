@@ -3474,3 +3474,9 @@ div#psmt-notice-message.updated p {
     flex-grow: 1;
   }
 }
+
+/* PS-Mediathek CSS */
+
+.psmt-gallery {
+  float: left;
+}
