@@ -3474,27 +3474,3 @@ div#psmt-notice-message.updated p {
     flex-grow: 1;
   }
 }
-
-/* PS-Mediathek CSS */
-
-.psmt-container, .psmt-container *, .psmt-g, .psmt-g * {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  box-sizing: border-box;
-  display: block;
-}
-.psmt-container, .psmt-container *, .psmt-g, .psmt-g * {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  box-sizing: border-box;
-  display: inline-table;
-  padding: 2px;
-}
-.psmt-item {
-  text-align: center;
-  margin-bottom: 20px;
-  padding: 5px;
-  float: left;
-}
