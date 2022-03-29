@@ -57,6 +57,10 @@ Halte Dich mit unserem [Newsletter](https://n3rds.work/webmasterservice-n3rdswor
 
 = 1.5.6 =
 
+* Responsiv müsste jetzt die Bildschirmbreite passen
+
+= 1.5.6 =
+
 * Quick CSS Fixes
 * Textoptimierungen
 * Code-Overhaul
