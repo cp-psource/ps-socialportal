@@ -58,6 +58,7 @@ Halte Dich mit unserem [Newsletter](https://n3rds.work/webmasterservice-n3rdswor
 = 1.5.6 =
 
 * Responsiv müsste jetzt die Bildschirmbreite passen
+* Template für [Netzwerksuche](https://n3rds.work/piestingtal_source/multisite-netzwerksuche-plugin/) hinzugefügt
 
 = 1.5.6 =
 

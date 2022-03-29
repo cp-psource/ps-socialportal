@@ -25,7 +25,7 @@ do_action( 'bp_before_blog_details_fields' );
 	<h4><?php _e( 'Blog Details', 'social-portal' ); ?></h4>
 
 	<p><label for="signup_with_blog">
-            <input type="checkbox" name="signup_with_blog" id="signup_with_blog" value="1"<?php if ( (int) bp_get_signup_with_blog_value() ) : ?> checked="checked"<?php endif; ?> /> <?php _e( 'Yes, I\'d like to create a new site', 'social-portal' ); ?>
+            <input type="checkbox" name="signup_with_blog" id="signup_with_blog" value="1"<?php if ( (int) bp_get_signup_with_blog_value() ) : ?> checked="checked"<?php endif; ?> /> <?php _e( 'Ja, ich möchte eine neue Website erstellen', 'social-portal' ); ?>
 		</label></p>
 
 	<div id="blog-details"
